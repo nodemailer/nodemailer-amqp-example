@@ -6,10 +6,17 @@ This example also demonstrates using different credentials for different message
 
 ## Setup
 
+Download files from Github
+
+```
+$ git clone git://github.com/nodemailer/nodemailer-amqp-example.git
+$ cd nodemailer-amqp-example
+```
+
 Install required dependencies
 
 ```
-npm install --production
+$ npm install --production
 ```
 
 Make sure that you have a RabbitMQ server running (default config assumes RabbitMQ running on localhost with default credentials) and also check the configuration options in [config.json](./config.json).
@@ -24,9 +31,11 @@ The example contains 3 different parts:
 
 Run all processes in different windows, using the following execution order:
 
-1. `npm run server`
-2. `npm run subscribe`
-3. `npm run publish`
+```
+$ npm run server
+$ npm run subscribe
+$ npm run publish
+```
 
 ## Example
 
