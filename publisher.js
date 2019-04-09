@@ -28,7 +28,7 @@ amqplib.connect(config.amqp, (err, connection) => {
             }
 
             // Create a function to send objects to the queue
-            // Javascript opbject is converted to JSON and the into a Buffer
+            // Javascript object is converted to JSON and then into a Buffer
             let sender = (content, next) => {
                 let sent = channel.sendToQueue(config.queue, Buffer.from(JSON.stringify(content)), {
                     // Store queued elements on disk
